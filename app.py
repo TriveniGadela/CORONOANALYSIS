@@ -8,7 +8,7 @@ from datetime import datetime
 
 # ── Page config ───────────────────────────────────────────────────────────────
 st.set_page_config(
-    page_title="COVID-19 Global Dashboard",
+    page_title="PandemicLens",
     page_icon="🌍",
     layout="wide",
     initial_sidebar_state="expanded",
@@ -121,7 +121,7 @@ def load_data():
 df, data_source = load_data()
 
 # ── Sidebar ───────────────────────────────────────────────────────────────────
-st.sidebar.markdown("## 🌍 COVID-19 Dashboard")
+st.sidebar.markdown("## 🌍 PandemicLens")
 st.sidebar.markdown("---")
 
 all_countries     = sorted(df["location"].unique())
@@ -182,7 +182,7 @@ st.markdown(
     f"""
     <div class="title-bar">
         <div>
-            <h1>🌍 COVID-19 Global Analysis Dashboard</h1>
+            <h1>🌍 PandemicLens </h1>
             <p>
                 {start_date} → {end_date} &nbsp;•&nbsp;
                 {len(selected_countries)} countries selected &nbsp;•&nbsp;
